@@ -2,8 +2,10 @@
 FROM ubuntu:14.04
 MAINTAINER James Oguya<oguyajames@gmail.com>
 
-# use local luquidtelcom mirror, update cache & upgrade base
+# use local luquidtelcom mirror
 COPY sources.list /etc/apt/sources.list
+
+# update cache & upgrade base os
 RUN apt-get update && apt-get -y upgrade
 
 # install most basic packages
